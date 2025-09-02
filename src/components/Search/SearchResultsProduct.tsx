@@ -1,3 +1,4 @@
+import "./style.css"
 import { ProductCardSeacrhResult } from "../ProductCard/ProductCardSearchResults";
 
 const searchResultCardsInfo = [

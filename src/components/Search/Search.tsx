@@ -1,3 +1,4 @@
+import "./style.css"
 import { PopularSearches } from "./PopularSearches"
 import { SearchField } from "./SearchField"
 

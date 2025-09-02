@@ -1,3 +1,4 @@
+import "./style.css"
 import SearchIcon from "../../ui/icons/SearchIcon"
 
 export const SearchField = () => {

@@ -1,3 +1,4 @@
+import "./style.css"
 import type { BadgeProps } from "../../ui/badge/badge";
 import { ProductCard } from "../ProductCard/ProductCard";
 
