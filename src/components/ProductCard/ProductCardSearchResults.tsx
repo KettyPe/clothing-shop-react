@@ -1,3 +1,4 @@
+import { ProductPrices } from "./ProductPrice"
 import "./styles.css"
 import type { ProductCardProps } from "./types"
 
@@ -12,22 +13,31 @@ export const ProductCardSeacrhResult = ({
 }: ProductCardSeacrhResultProps) => {
   return (
     <a href="#" className="card-search-result">
-      <a href="#" className="card-search-result__image">
-        <img src={`images/products/${image}.jpg`} alt="" />
-      </a>
+      <ProductImage image={image}/>
+      
       <div className="card-search-result__info">
-        <a href="#" className="card-search-result__title">{title}</a>
-        <div className="card-search-result__price prices">
-          <div className="card-search-result__price-normal price-normal">{price} ₽</div>
-          {oldPrice && (
-            <div className="card-search-result__price-old price-old">{oldPrice} ₽</div>
-          )}
+        <ProductTitle title={title} />
 
-          {discount && (
-            <div className="card-search-result__discount discount">-{discount}%</div>
-          )}
-        </div>
+        <ProductPrices
+          price={price}
+          oldPrice={oldPrice}
+          discount={discount}
+        />
       </div>
+    </a>
+  )
+}
+
+const ProductTitle = ({ title }: { title: string }) => {
+  return (
+    <a href="#" className="card-search-result__title">{title}</a>
+  )
+}
+
+const ProductImage = ({ image }: { image: string }) => {
+  return (
+    <a href="#" className="card-search-result__image">
+      <img src={`images/products/${image}.jpg`} alt="" />
     </a>
   )
 }
