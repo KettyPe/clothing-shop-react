@@ -1,0 +1,39 @@
+.badge-cards {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.badge-card {
+  border-radius: 15px;
+  padding: 4px 8px;
+  width: max-content;
+}
+
+.badge-card span {
+  font-weight: 800;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #fff;
+  display: block;
+}
+
+.badge-card--hit {
+  background-color: var(--color-orange);
+}
+
+.badge-card--sale {
+  background-color: var(--color-yellow);
+}
+
+.badge-card--premium {
+  background-color: var(--color-main);
+}
+
+.badge-card--new {
+  background-color: var(--color-green);
+}

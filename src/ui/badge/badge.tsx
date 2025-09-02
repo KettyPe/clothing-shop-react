@@ -1,3 +1,4 @@
+import "./style.css"
 
 export type BadgeProps = {
      variant?: 'hit' | 'sale' | 'premium' | 'new';

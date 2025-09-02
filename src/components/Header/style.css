@@ -1,0 +1,48 @@
+.header {
+  margin-bottom: 10px;
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.header__tg {
+  border-radius: 40px;
+  padding: 3px 7px 3px 3px;
+  box-shadow: var(--shadow-100);
+  background-color: var(--color-white);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.header__tg span {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 105%;
+}
+
+.header__button,
+.header__dropdown {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: 20px;
+  padding: 10px 14px;
+  backdrop-filter: blur(30px);
+  background-color: var(--color-gray-300);
+  height: 30px;
+  color: var(--color-gray-600);
+}
+
+.header__dropdown {
+  gap: 11px;
+}
+
+.header__button span {
+  font-weight: 500;
+  font-size: 11px;
+}
