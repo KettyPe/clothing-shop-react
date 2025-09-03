@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./style.css"
-
 
 interface Category {
      Category_ID: number;
@@ -37,8 +36,8 @@ export const Categories = () => {
           fetchCategories()
      }, [])
 
-     if (loading) return <p>Загрузка категорий...</p>
-     if (error) return <p>Ошибка: {error}</p>
+     if (loading) return <p className="container">Загрузка категорий...</p>
+     if (error) return <p className="container">Ошибка: {error}</p>
 
      return (
           <div className="categories">

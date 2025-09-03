@@ -8,9 +8,9 @@ export const Search = () => {
                <div className="search__container container">
                     <div className="search__body">
                          <SearchField/>
-                         <div className="search__result">
+                         {/* <div className="search__result">
                               <PopularSearches />
-                         </div>
+                         </div> */}
                     </div>
                </div>
           </div>

@@ -1,5 +1,5 @@
 #root {
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .container {
@@ -17,4 +17,10 @@
 
 .product-favorite svg {
   color: var(--color-gray-910);
+}
+
+@media (max-width: 520px) {
+  .container {
+    padding: 0px 10px;
+  }
 }

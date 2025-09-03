@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import "./style.css"
 import type { BadgeProps } from "../../ui/badge/badge";
 import { ProductCard } from "../ProductCard/ProductCard";
@@ -71,27 +72,38 @@ const productsInfo: ProductInfo[] = [
 ]
 
 export const Products = () => {
-     return (
-          <div className='products'>
-               <div className="products__container container">
-                    <div className="products__cards">
-                         {productsInfo.map((card) => {
-                              const { id, image, title, price, oldPrice, discount, badges } = card;
+  // const [products, setProducts] = useState<ProductInfo[]>([])
 
-                              return (
-                                   <ProductCard
-                                        key={id}
-                                        image={image}
-                                        title={title}
-                                        price={price}
-                                        oldPrice={oldPrice}
-                                        discount={discount}
-                                        badges={badges}
-                                   />
-                              )
-                         })}
-                    </div>
-               </div>
-          </div>
-     )
+  // useEffect(() => {
+  //   fetch("https://noxer-test.ru/webapp/api/products?on_main=true")
+  //     .then(res => res.json())
+  //     .then(data => {
+  //       setProducts(data)
+  //     })
+  //     .catch(err => console.error(err))
+  // }, [])
+
+  return (
+    <div className='products'>
+      <div className="products__container container">
+        <div className="products__cards">
+          {productsInfo.map((card) => {
+            const { id, image, title, price, oldPrice, discount, badges } = card;
+
+            return (
+              <ProductCard
+                key={id}
+                image={image}
+                title={title}
+                price={price}
+                oldPrice={oldPrice}
+                discount={discount}
+                badges={badges}
+              />
+            )
+          })}
+        </div>
+      </div>
+    </div>
+  )
 }
