@@ -15,16 +15,16 @@ function SearchIcon(props: Props) {
                <path
                     d="M7.08366 12.7513C10.2133 12.7513 12.7503 10.2142 12.7503 7.08464C12.7503 3.95502 10.2133 1.41797 7.08366 1.41797C3.95405 1.41797 1.41699 3.95502 1.41699 7.08464C1.41699 10.2142 3.95405 12.7513 7.08366 12.7513Z"
                     stroke="currentColor"
-                    stroke-width="1.41667"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="1.41667"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                />
                <path
                     d="M15.5839 15.5829L12.2783 12.2773"
                     stroke="currentColor"
-                    stroke-width="1.41667"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="1.41667"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                />
           </svg>
      );

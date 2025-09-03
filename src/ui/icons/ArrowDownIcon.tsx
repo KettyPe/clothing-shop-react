@@ -15,9 +15,9 @@ function ArrowDownIcon(props: Props) {
                <path
                     d="M13 1.00012L7 7.00012L1 1.00012"
                     stroke="#666666"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                />
           </svg>
      );
