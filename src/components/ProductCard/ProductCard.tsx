@@ -1,9 +1,9 @@
-import "./styles.css"
-import { Badge } from "../../ui/badge/badge"
-import Button from "../../ui/button/Button"
-import FavoriteIcon from "../../ui/icons/FavoriteIcon"
-import type { ProductCardProps } from "./types"
-import { ProductPrices } from "./ProductPrice"
+import './styles.css';
+import { Badge } from '../../ui/badge/badge';
+import Button from '../../ui/button/Button';
+import FavoriteIcon from '../../ui/icons/FavoriteIcon';
+import type { ProductCardProps } from './types';
+import { ProductPrices } from './ProductPrice';
 
 export const ProductCard = ({
   image,
@@ -11,7 +11,7 @@ export const ProductCard = ({
   price,
   oldPrice,
   discount,
-  badges = []
+  badges = [],
 }: ProductCardProps) => {
   return (
     <div className="product-card">
@@ -20,11 +20,7 @@ export const ProductCard = ({
         {badges.length > 0 && (
           <div className="badge-cards">
             {badges.map((badge, index) => (
-              <Badge
-                key={index}
-                variant={badge.variant}
-                text={badge.text}
-              />
+              <Badge key={index} variant={badge.variant} text={badge.text} />
             ))}
           </div>
         )}
@@ -33,22 +29,18 @@ export const ProductCard = ({
         </div>
       </a>
       <div className="product-card__info">
-        <ProductPrices
-          price={price}
-          oldPrice={oldPrice}
-          discount={discount}
-        />
+        <ProductPrices price={price} oldPrice={oldPrice} discount={discount} />
         <ProductTitle title={title} />
       </div>
       <Button className="product-card__button">Выбрать</Button>
     </div>
-  )
-}
-
-
+  );
+};
 
 const ProductTitle = ({ title }: { title: string }) => {
   return (
-    <a href="#" className="product-card__title">{title}</a>
-  )
-}
+    <a href="#" className="product-card__title">
+      {title}
+    </a>
+  );
+};

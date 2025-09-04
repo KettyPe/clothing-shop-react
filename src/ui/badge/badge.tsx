@@ -1,25 +1,19 @@
-import "./style.css"
+import './style.css';
 
 export type BadgeProps = {
-     variant?: 'hit' | 'sale' | 'premium' | 'new';
-     text: string;
-     className?: string;
-}
+  variant?: 'hit' | 'sale' | 'premium' | 'new';
+  text: string;
+  className?: string;
+};
 
-export const Badge = ({
-     variant,
-     text,
-     className = ''
-}: BadgeProps) => {
-     const badgeClasses = [
-          'badge-card',
-          variant ? `badge-card--${variant}` : '',
-          className
-     ].filter(Boolean).join(' ')
+export const Badge = ({ variant, text, className = '' }: BadgeProps) => {
+  const badgeClasses = ['badge-card', variant ? `badge-card--${variant}` : '', className]
+    .filter(Boolean)
+    .join(' ');
 
-     return (
-          <div className={badgeClasses}>
-               <span>{text}</span>
-          </div>
-     )
-}
+  return (
+    <div className={badgeClasses}>
+      <span>{text}</span>
+    </div>
+  );
+};

@@ -1,24 +1,20 @@
-import "./styles.css"
+import './styles.css';
 
 export const ProductPrices = ({
   price,
   oldPrice,
-  discount
+  discount,
 }: {
-  price: string
-  oldPrice?: string
-  discount?: string
+  price: string;
+  oldPrice?: string;
+  discount?: string;
 }) => {
   return (
     <div className="product-card__price prices">
       <div className="product-card__price-normal price-normal">{price} ₽</div>
-      {oldPrice && (
-        <div className="product-card__price-old price-old">{oldPrice} ₽</div>
-      )}
+      {oldPrice && <div className="product-card__price-old price-old">{oldPrice} ₽</div>}
 
-      {discount && (
-        <div className="product-card__discount discount">-{discount}%</div>
-      )}
+      {discount && <div className="product-card__discount discount">-{discount}%</div>}
     </div>
-  )
-}
+  );
+};

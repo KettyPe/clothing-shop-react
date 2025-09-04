@@ -1,28 +1,28 @@
-import "./style.css"
-import SearchIcon from "../../ui/icons/SearchIcon"
+import './style.css';
+import SearchIcon from '../../ui/icons/SearchIcon';
 
 const PopularSearchesInfo = [
   {
     id: 1,
-    title: "футболка"
+    title: 'футболка',
   },
   {
     id: 2,
-    title: "женская кофта"
+    title: 'женская кофта',
   },
   {
     id: 3,
-    title: "сертификат"
+    title: 'сертификат',
   },
   {
     id: 4,
-    title: "куртка"
+    title: 'куртка',
   },
   {
     id: 5,
-    title: "детская футболка"
+    title: 'детская футболка',
   },
-]
+];
 
 export const PopularSearches = () => {
   return (
@@ -34,8 +34,8 @@ export const PopularSearches = () => {
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
 const PopularSearchesItem = ({ title }: { title: string }) => {
   return (
@@ -43,5 +43,5 @@ const PopularSearchesItem = ({ title }: { title: string }) => {
       <SearchIcon width={10} height={10} />
       <p className="popular-searches__item-title">{title}</p>
     </a>
-  )
-}
+  );
+};

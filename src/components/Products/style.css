@@ -1,25 +1,25 @@
 .products__cards {
-     display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     gap: 5px;
-     margin-bottom: 128px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  margin-bottom: 128px;
 }
 
 @media (max-width: 520px) {
-     .products__cards {
-          grid-template-columns: repeat(2, 1fr);
-     }
+  .products__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 420px) {
-     .product-card__title {
-          font-size: 13px;
-     }
-     .price-normal {
-          font-size: 16px;
-     }
-     .price-old,
-     .discount {
-          font-size: 10px;
-     }
+  .product-card__title {
+    font-size: 13px;
+  }
+  .price-normal {
+    font-size: 16px;
+  }
+  .price-old,
+  .discount {
+    font-size: 10px;
+  }
 }

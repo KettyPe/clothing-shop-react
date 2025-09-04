@@ -1,9 +1,9 @@
 /* Inter Regular */
 @font-face {
-  font-family: "Inter";
+  font-family: 'Inter';
   src:
-    url("/fonts/Inter-Regular.woff2") format("woff2"),
-    url("/fonts/Inter-Regular.woff") format("woff");
+    url('/fonts/Inter-Regular.woff2') format('woff2'),
+    url('/fonts/Inter-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -11,10 +11,10 @@
 
 /* Inter Medium */
 @font-face {
-  font-family: "Inter";
+  font-family: 'Inter';
   src:
-    url("/fonts/Inter-Medium.woff2") format("woff2"),
-    url("/fonts/Inter-Medium.woff") format("woff");
+    url('/fonts/Inter-Medium.woff2') format('woff2'),
+    url('/fonts/Inter-Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -22,10 +22,10 @@
 
 /* Inter SemiBold */
 @font-face {
-  font-family: "Inter";
+  font-family: 'Inter';
   src:
-    url("/fonts/Inter-SemiBold.woff2") format("woff2"),
-    url("/fonts/Inter-SemiBold.woff") format("woff");
+    url('/fonts/Inter-SemiBold.woff2') format('woff2'),
+    url('/fonts/Inter-SemiBold.woff') format('woff');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -33,10 +33,10 @@
 
 /* Inter Bold */
 @font-face {
-  font-family: "Inter";
+  font-family: 'Inter';
   src:
-    url("/fonts/Inter-Bold.woff2") format("woff2"),
-    url("/fonts/Inter-Bold.woff") format("woff");
+    url('/fonts/Inter-Bold.woff2') format('woff2'),
+    url('/fonts/Inter-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -44,10 +44,10 @@
 
 /* Mulish ExtraBold */
 @font-face {
-  font-family: "Mulish";
+  font-family: 'Mulish';
   src:
-    url("/fonts/Mulish-ExtraBold.woff2") format("woff2"),
-    url("/fonts/Mulish-ExtraBold.woff") format("woff");
+    url('/fonts/Mulish-ExtraBold.woff2') format('woff2'),
+    url('/fonts/Mulish-ExtraBold.woff') format('woff');
   font-weight: 800;
   font-style: normal;
   font-display: swap;
@@ -68,9 +68,9 @@
   --color-gray-500: #8b8b8b;
   --color-gray-600: #666666;
   --color-gray-700: rgba(108, 108, 108, 0.1);
-  --color-gray-800: #85858B;
+  --color-gray-800: #85858b;
   --color-gray-900: rgba(41, 41, 40, 0.3);
-  --color-gray-910: #6C6C6C;
+  --color-gray-910: #6c6c6c;
 
   /* blue color */
   --color-blue-100: #37aee2;
@@ -114,7 +114,7 @@ body {
 }
 
 body {
-  font-family: "Inter";
+  font-family: 'Inter';
   font-weight: 400;
   font-size: 14px;
   color: var(--color-main);
