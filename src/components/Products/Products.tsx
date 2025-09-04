@@ -1,7 +1,6 @@
-import { useEffect, useState, useRef } from 'react';
+import { useState} from 'react';
 import './style.css';
 import type { BadgeProps } from '../../ui/badge/badge';
-import { ProductCard } from '../ProductCard/ProductCard';
 import { products } from '../data';
 import { useInfiniteScroll } from '../../hooks/useInfiniteScroll';
 import { ProductList } from './ProductList';
