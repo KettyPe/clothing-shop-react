@@ -3,7 +3,7 @@ import CatalogIcon from "../ui/icons/CatalogIcon"
 import FavoriteIcon from "../ui/icons/FavoriteIcon"
 import CartIcon from "../ui/icons/CartIcon"
 import AccountIcon from "../ui/icons/AccountIcon"
-import type { Products } from "./Products/ProductsGrid"
+import type { Products } from "./Products/Products"
 
 export const footerMenuInfo = [
      {
