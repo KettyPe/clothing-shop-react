@@ -1,55 +1,42 @@
 import "./style.css"
-import { PopularSearches } from "./PopularSearches"
 import { SearchField } from "./SearchField"
 import { useEffect, useRef, useState } from "react";
 import { useAtom } from "jotai";
 import { searchOpenAtom } from "../../store/store";
+import { products } from "../data";
+import { useClickOutside } from "../../hooks/useClickOutside";
+import { SearchResults } from "./SearchResults";
 
 export const Search = () => {
-     const [isOpen, setIsOpen] = useAtom(searchOpenAtom);
-     const [searchValue, setSearchValue] = useState('');
-     const containerRef = useRef<HTMLDivElement>(null);
+    const [isOpen, setIsOpen] = useAtom(searchOpenAtom);
+    const [searchValue, setSearchValue] = useState("");
+    const containerRef = useRef<HTMLDivElement>(null);
 
-     useEffect(() => {
-          const handleClickOutside = (event: MouseEvent) => {
-               if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
-                    setIsOpen(false);
-               }
-          };
+    useClickOutside(containerRef, () => {
+        setIsOpen(false);
+        setSearchValue("");
+    }, isOpen);
 
-          if (isOpen) {
-               document.addEventListener('mousedown', handleClickOutside);
-                document.body.style.overflow = "hidden";
-          } else {
-               document.body.style.overflow = "";
-          }
+    useEffect(() => {
+        document.body.style.overflow = isOpen ? "hidden" : "";
+    }, [isOpen]);
 
-          return () => {
-               document.removeEventListener('mousedown', handleClickOutside);
-               document.body.style.overflow = "";
-          };
-     }, [isOpen]);
-
-     const handleFocus = () => {
-          setIsOpen(true);
-     };
-
-     return (
-          <div className="search">
-               <div className="search__container container">
-                    <div className="search__body">
-                         <SearchField
-                              onFocus={handleFocus}
-                              value={searchValue}
-                              onChange={setSearchValue}
-                         />
-                         {isOpen && (
-                              <div className="search__result">
-                                   <PopularSearches />
-                              </div>
-                         )}
-                    </div>
-               </div>
-          </div>
-     )
-}
+    return (
+        <div className="search" ref={containerRef}>
+            <div className="search__container container">
+                <div className="search__body">
+                    <SearchField
+                        value={searchValue}
+                        onChange={setSearchValue}
+                        onFocus={() => setIsOpen(true)}
+                    />
+                    {isOpen && (
+                        <div className="search__result">
+                            <SearchResults searchValue={searchValue} products={products} />
+                        </div>
+                    )}
+                </div>
+            </div>
+        </div>
+    );
+};

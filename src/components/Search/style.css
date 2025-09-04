@@ -17,7 +17,7 @@
   box-shadow: var(--shadow-100);
   background-color: var(--color-white);
   position: relative;
-  z-index: 2;
+  z-index: 12;
 }
 
 .search__icon {
