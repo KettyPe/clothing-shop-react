@@ -11,7 +11,6 @@ export const Input = (props: InputProps) => {
       <input
         value={props.value || ''}
         onChange={(e) => props.onChange?.(e.target.value)}
-        placeholder="Поиск..."
         onFocus={props.onFocus}
         onBlur={props.onBlur}
         type="text"
