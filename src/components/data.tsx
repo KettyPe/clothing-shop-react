@@ -3,7 +3,7 @@ import CatalogIcon from "../ui/icons/CatalogIcon"
 import FavoriteIcon from "../ui/icons/FavoriteIcon"
 import CartIcon from "../ui/icons/CartIcon"
 import AccountIcon from "../ui/icons/AccountIcon"
-import type { ProductInfo } from "./Products/ProductsGrid"
+import type { Products } from "./Products/ProductsGrid"
 
 export const footerMenuInfo = [
      {
@@ -29,7 +29,7 @@ export const footerMenuInfo = [
 ]
 
 
-export const products: ProductInfo[] = [
+export const products: Products[] = [
   {
     id: 1,
     image: "card-01",

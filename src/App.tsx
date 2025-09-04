@@ -8,14 +8,16 @@ import { Search } from './components/Search/Search'
 
 function App() {
   return (
-    <div>
-      <Header/>
-      <Search/>
-      <MainblockBanner/>
-      <Categories/>
-      <Products/>
-      <Footer/>
-    </div>
+    <>
+      <Header />
+      <main>
+        <Search />
+        <MainblockBanner />
+        <Categories />
+        <Products />
+      </main>
+      <Footer />
+    </>
   )
 }
 

@@ -1,3 +1,22 @@
+/* .footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--color-gray-100);
+  padding-top: 22px;
+} */
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding-top: 12px;
+  background-color: var(--color-gray-100);
+}
+
 .footer__info {
   margin-bottom: 10px;
 }
@@ -33,13 +52,6 @@
 }
 
 .footer__menu {
-  /* position: fixed;
-  max-width: 590px;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  bottom: 0;
-  width: 100%; */
   border: 1px solid var(--color-gray-700);
   border-radius: 30px;
   backdrop-filter: blur(30px);
