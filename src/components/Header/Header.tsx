@@ -3,14 +3,23 @@ import ArrowDownIcon from "../../ui/icons/ArrowDownIcon"
 import CloseIcon from "../../ui/icons/CloseIcon"
 import MoreIcon from "../../ui/icons/MoreIcon"
 import TelegramCircleIcon from "../../ui/icons/TelegramCircleIcon"
+import ArrowLeftIcon from "../../ui/icons/ArrowLeftIcon"
 
+import { useAtom } from "jotai";
+import { searchOpenAtom } from "../../store/store";
 
 export const Header = () => {
+     const [isSearchOpen, setSearchOpen] = useAtom(searchOpenAtom);
+
      return (
           <div className="header">
                <div className="header__container container">
                     <div className="header__inner">
-                         <ButtonClose />
+                         {isSearchOpen ? (
+                              <ButtonClose onClick={() => setSearchOpen(false)} icon={<ArrowLeftIcon />} text="Назад" />
+                         ) : (
+                              <ButtonClose icon={<CloseIcon />} text="Закрыть" />
+                         )}
                          <ButtonTelegram />
                          <ButtonDropdown />
                     </div>
@@ -19,11 +28,19 @@ export const Header = () => {
      )
 }
 
-const ButtonClose = () => {
+const ButtonClose = ({
+     icon,
+     text,
+     onClick
+}: {
+     icon: React.ReactNode;
+     text: string,
+     onClick?: () => void
+}) => {
      return (
-          <button className="header__button" type='button'>
-               <CloseIcon />
-               <span>Закрыть</span>
+          <button onClick={onClick} className="header__button" type='button'>
+               {icon}
+               <span>{text}</span>
           </button>
      )
 }
