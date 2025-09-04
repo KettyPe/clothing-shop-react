@@ -1,6 +1,6 @@
-import React from "react";
 import "./style.css"
 import SearchIcon from "../../ui/icons/SearchIcon"
+import { Input } from "../../ui/input/Input";
 
 interface SearchFieldProps {
      onFocus?: () => void;
@@ -13,15 +13,11 @@ export const SearchField = (props: SearchFieldProps) => {
      return (
           <div className="search__inner">
                <SearchIcon className="search__icon" />
-               <input
-                    value={props.value || ''}
-                    onChange={(e) => props.onChange?.(e.target.value)}
-                    placeholder="Поиск..."
+               <Input
                     onFocus={props.onFocus}
                     onBlur={props.onBlur}
-                    type="text"
-                    placeholder="Найти товары"
-                    className="search__input"
+                    onChange={props.onChange}
+                    value={props.value}
                />
           </div>
      )
