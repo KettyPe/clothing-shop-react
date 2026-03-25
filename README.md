@@ -4,7 +4,7 @@
  
 ---
  
-**Живой деплой:** clothing-shop-react-three.vercel.app
+**Живой деплой:** https://clothing-shop-react-three.vercel.app
  
 ---
  
