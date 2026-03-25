@@ -4,7 +4,7 @@
  
 ---
  
-**Живой деплой:** https://noxer-test.vercel.app/
+**Живой деплой:** clothing-shop-react-three.vercel.app
  
 ---
  
